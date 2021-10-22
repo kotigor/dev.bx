@@ -6,5 +6,5 @@ function printMessage(string $message): void
 
 function isValidAge(string $age) : bool
 {
-	return is_numeric($age) && ($age >= 0);
+	return is_numeric($age) && ((int)$age >= 0);
 }

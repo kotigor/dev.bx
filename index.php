@@ -10,7 +10,7 @@ printMessage($title);
 $input = readline("Enter age: ");
 if (isValidAge($input))
 {
-	printMovies(filterMoviesByAge($movies, $input));
+	printMoviesByAge($movies, (int)$input);
 }
 else
 {

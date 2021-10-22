@@ -1,18 +1,6 @@
 <?php
-function filterMoviesByAge(array $movies, int $age) : array
-{
-	$filteredMovies = [];
-	foreach ($movies as $movie)
-	{
-		if($movie["age_restriction"] <= $age)
-		{
-			$filteredMovies[] = $movie;
-		}
-	}
-	return $filteredMovies;
-}
 
-function formatMovies(array $movie, int $index = null)
+function formatMovie(array $movie, int $index = null) : string
 {
 	$indexString = ($index === null) ? "" : "{$index}. ";
 	return "{$indexString}{$movie['title']} "
@@ -20,10 +8,15 @@ function formatMovies(array $movie, int $index = null)
 		."Rating - {$movie['rating']}";
 }
 
-function printMovies(array $movies)
+function printMoviesByAge(array $movies, int $age)
 {
-	foreach ($movies as $index => $movie)
+	$index = 0;
+	foreach ($movies as $movie)
 	{
-		printMessage(formatMovies($movie, $index + 1));
+		if($movie["age_restriction"] <= $age)
+		{
+			printMessage(formatMovie($movie, $index + 1));
+			$index++;
+		}
 	}
 }
