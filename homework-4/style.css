@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;400&display=swap');
+
+.wrapper{
+	display: flex;
+	overflow: hidden;
+	height: 100vh;
+}
+
+.sidebar{
+	display: flex;
+	width: 400px;
+	background: #383838;
+	flex-direction: column;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background: #CCCCCC;
+}
+
+.header{
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	height: 88px;
+	background: #FFFFFF;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.movie-list{
+	flex: 1;
+	overflow: auto;
+}
+
+.sidebar-menu{
+	display: flex;
+	flex-direction: column;
+	margin: 0 30px;
+}
+
+.sidebar-menu-item{
+	display: block;
+	border-bottom: 1px solid rgba(242, 242, 242, 0.1);
+}
+
+.sidebar-menu-item a{
+	display: flex;
+	height: 70px;
+	align-items: center;
+
+	padding: 0 15px;
+
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	color: #B7B7B7;
+}
+
+.sidebar-menu-item:last-child{
+	border: none;
+}
+
+.menu-item--active a,
+.sidebar-menu-item a:hover{
+	color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.logo{
+	margin: 52px 0 55px 81px;
+	width: 216px;
+	height: 62px;
+}
+
+.header-forms{
+	font-family: Open Sans, sans-serif;
+}
+
+.header-forms-find-movie{
+	display: flex;
+	flex: 1;
+	margin-right: 134px;
+	margin-left: 40px;
+}
+
+.header-forms-add-movie{
+	display: flex;
+	margin-right: 50px;
+}
+
+.header-forms-find-movie-input{
+	flex: 1;
+	padding-left: 30px;
+	padding-bottom: 0;
+
+	border: none;
+
+	border-bottom: 1px solid #C4C4C4;
+	background-image: url(resources/service/search.svg);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-blend-mode: difference;
+
+	font-size: 18px;
+	line-height: 40px;
+	color: #999999;
+}
+
+.header-forms-find-movie-button{
+	align-items: center;
+	padding: 0 25px;
+	margin-left: 15px;
+
+	border: none;
+	border-radius: 7px;
+
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	background: #E7A04E;
+}
+.movie-list-item-hover-form-button,
+.header-forms-add-movie-button{
+	padding: 0 25px;
+
+	border: none;
+	border-radius: 7px;
+
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	background: #4EE7B0;
+}
+
+.header-forms{
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px;
+}
+
+.movie-list-item{
+	position: relative;
+	font-family: Open Sans, sans-serif;
+	height: 700px;
+	width: 370px;
+	background: #FFFFFF;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	margin: 15px;
+	display: inline-block;
+}
+
+.movie-list-item-poster{
+	height: 430px;
+	background-image: url(resources/poster1.png);
+	background-size: cover;
+	border-radius: 20px 20px 0 0;
+}
+
+.movie-list-item-info{
+	margin: 15px 20px;
+}
+
+.movie-list-item-info-title{
+	padding-bottom: 8px;
+
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 30px;
+
+	color: #333333;
+}
+
+.movie-list-item-info-subtitle{
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 25px;
+
+
+	color: #999999;
+}
+
+.movie-list-item-delimiter{
+	height: 1px;
+	background: #F2F2F2;
+	margin: 15px 20px;
+}
+
+.movie-list-item-footer{
+	display: flex;
+	font-size: 12px;
+	line-height: 22px;
+	margin: 20px 20px;
+
+	color: #CCCCCC;
+}
+
+.movie-list-item-footer-time-icon{
+	height: 20px;
+	width: 20px;
+	background-image: url(resources/service/time.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 4px;
+}
+
+.movie-list-item-footer-time{
+	margin-right: 19px;
+}
+
+.movie-list-item-description{
+	font-size: 14px;
+	line-height: 20px;
+	height: 100px;
+
+	color: #333333;
+	padding: 0 20px 0 20px;
+}
+
+.movie-list-item-hover{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	border-radius: 20px;
+	display: none;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.movie-list-item:hover .movie-list-item-hover{
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.movie-list-item-hover-form-button{
+	line-height: 56px;
+}
