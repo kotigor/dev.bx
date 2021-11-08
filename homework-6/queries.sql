@@ -29,7 +29,7 @@ WHERE mt.LANGUAGE_ID = 'ru';
 SELECT m.ID,
        IFNULL(mt.TITLE,
               (SELECT mt2.TITLE
-               from movie_title mt2
+               FROM movie_title mt2
                WHERE mt2.MOVIE_ID = m.ID)
 	       ) as TITLE
 FROM movie m
@@ -46,7 +46,7 @@ FROM movie m
 	     INNER JOIN movie_title mt on m.ID = mt.MOVIE_ID
 WHERE m.LENGTH =
       (SELECT MAX(m2.LENGTH)
-       from movie m2
+       FROM movie m2
        WHERE m2.DIRECTOR_ID = 1)
   AND mt.LANGUAGE_ID = 'ru';
 
@@ -118,5 +118,5 @@ FROM (SELECT a.NAME a_name, g.NAME g_name, COUNT(*) count
 		                            INNER JOIN actor a on ma.ACTOR_ID = a.ID
 	                       GROUP BY 1, 2) count
 	                 GROUP BY 1) max on max.a_name = count.a_name
-where max.max = count.count
+WHERE max.max = count.count
 GROUP BY 1
