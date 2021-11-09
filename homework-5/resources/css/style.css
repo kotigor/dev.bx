@@ -124,6 +124,11 @@
 	color: #FFFFFF;
 
 	background: #E7A04E;
+	transition: 0.3s;
+}
+
+.header-forms-find-movie-button:hover{
+	opacity: 0.8;
 }
 
 .header-add-movie-button{
@@ -143,10 +148,12 @@
 	display: flex;
 	align-items: center;
 	text-decoration: none;
+	transition: 0.3s;
+	margin-right: 50px;
 }
 
-.header-add-movie-button{
-	margin-right: 50px;
+.header-add-movie-button:hover{
+	opacity: 0.8;
 }
 
 .header-forms{
