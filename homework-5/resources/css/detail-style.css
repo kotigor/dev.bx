@@ -1,0 +1,194 @@
+.movie-card{
+	background: #FFFFFF;
+	margin: 40px 51px 20px 46px;
+	padding: 35px 15px 55px 45px;
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-card-header{
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+
+.movie-card-header-title{
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 65px;
+
+	color: #333333;
+}
+
+.movie-card-header-subtitle-and-age-limit{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.movie-card-header-subtitle{
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 33px;
+
+	margin-right: 15px;
+
+	color: #999999;
+
+}
+.movie-card-header-age-limit{
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	border: solid 3px;
+	border-radius: 7px;
+
+	width: 36px;
+	height: 29px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #CCCCCC;
+}
+
+.movie-card-header-favorite-button{
+	height: 37px;
+	width: 43px;
+	position: absolute;
+	right: 0;
+	background-image: url(../service-icons/favorite-button.svg);
+	background-size: cover;
+}
+
+.movie-card-header-favorite-button--active,
+.movie-card-header-favorite-button:hover{
+	background-image: url(../service-icons/favorite-button-active.svg);
+}
+
+.movie-card-delimiter{
+	height: 1px;
+	background: #CCCCCC;
+	margin-top: 25px;
+}
+
+.movie-card-detail{
+	margin: 30px 0;
+	display: flex;
+}
+
+.movie-card-detail-poster{
+	min-width: 469px;
+	min-height: 730px;
+	width: 469px;
+	height: 730px;
+	background-size: cover;
+	background-position: center;
+	border: solid 12px #F2F2F2;
+}
+
+.movie-card-detail-info{
+	display: flex;
+	flex-direction: column;
+	margin-left: 32px;
+}
+
+.movie-rating{
+	display: flex;
+	align-items: center;
+}
+
+.movie-rating-square--enable,
+.movie-rating-square--disable{
+	width: 22px;
+	height: 22px;
+	border: 5px solid #FFFFFF;
+}
+
+.movie-rating-square--enable{
+	background: #E78818;
+}
+
+.movie-rating-square--disable{
+	background: #F2F2F2;;
+}
+
+.movie-rating-number{
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background: #E78818;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 30px;
+	color: #FFFFFF;
+	margin-left: 12px;
+}
+
+.movie-card-detail-info-about{
+	display: flex;
+	flex-direction: column;
+	margin-top: 28px;
+}
+.movie-description-title,
+.movie-about-title{
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #333333;
+	margin-bottom: 7px;
+}
+
+.move-description,
+.movie-about-item-text{
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	/* identical to box height */
+
+
+	color: #000000;
+}
+
+.movie-about-item{
+	display: flex;
+	margin-top: 15px;
+}
+
+.movie-about-item-title{
+	min-width: 200px;
+	font-family: Open Sans, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	/* identical to box height */
+
+
+	color: #666666;
+
+}
+
+.movie-card-detail-info-description{
+	margin-top: 25px;
+}
+
+.move-description{
+	font-size: 18px;
+	margin-top: 15px;
+}

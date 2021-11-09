@@ -1,0 +1,148 @@
+.movie-list-item-hover-button{
+	padding: 0 25px;
+
+	border: none;
+	border-radius: 7px;
+
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	background: #4EE7B0;
+
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.movie-list-item{
+	position: relative;
+	font-family: Open Sans, sans-serif;
+	height: 700px;
+	width: 370px;
+	background: #FFFFFF;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	margin: 15px;
+	display: inline-block;
+}
+
+.movie-list-item-poster{
+	height: 430px;
+	border-radius: 20px 20px 0 0;
+}
+
+.movie-list-item-info{
+	margin: 15px 20px;
+	white-space: nowrap;
+}
+
+.movie-list-item-info-title{
+	padding-bottom: 8px;
+
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 30px;
+
+	color: #333333;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.movie-list-item-info-subtitle{
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 25px;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	color: #999999;
+}
+
+.movie-list-item-delimiter{
+	height: 1px;
+	background: #F2F2F2;
+	margin: 15px 20px;
+}
+
+.movie-list-item-footer{
+	position: relative;
+	display: flex;
+	line-height: 22px;
+	margin: 20px 20px;
+
+	color: #CCCCCC;
+}
+
+.movie-list-item-footer-time-icon{
+	height: 20px;
+	width: 20px;
+	background-image: url(../service-icons/time.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 4px;
+}
+
+.movie-list-item-footer-time{
+	margin-right: 19px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.movie-list-item-footer-genres{
+	position: absolute;
+	right: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 200px;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+}
+
+.movie-list-item-description{
+	font-size: 14px;
+	line-height: 20px;
+	height: 100px;
+	overflow: hidden;
+	color: #333333;
+	padding: 0 20px 0 20px;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+
+.movie-list-item-hover{
+	display: flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	border-radius: 20px;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: 0.5s;
+	align-items: center;
+	justify-content: center;
+}
+
+.movie-list-item:hover .movie-list-item-hover{
+	opacity: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.movie-list-item-hover-button{
+	line-height: 56px;
+	padding: 0 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
