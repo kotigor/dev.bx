@@ -9,11 +9,27 @@ require_once "./config/app.php";
 /** @var array $movies */
 /** @var array $genres */
 /** @var array $config */
+$movie = [];
+$errors = [];
 
-$movieId = $_GET['movie-id'];
-$movie = getMovieById($movies, (int)$movieId);
+if (isset($_GET['movie-id']))
+{
+	$movieId = $_GET['movie-id'];
+	$movie = getMovieById($movies, (int)$movieId);
+	if ($movie === false)
+	{
+		$errors[] = 'Фильм не существует';
+	}
+}
+else
+{
+	$errors[] = 'Фильм не выбран';
+}
 
-$movieCard = renderTemplate('./resources/pages/movie-card.php', ['movie' => $movie]);
+$movieCard = renderTemplate('./resources/pages/movie-card.php', [
+	'movie' => $movie,
+	'errors' => $errors
+]);
 
 renderLayout($movieCard, [
 	'genres' => $genres,

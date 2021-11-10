@@ -28,7 +28,7 @@
 		<div class="header">
 			<div class="header-forms">
 				<form class="header-forms-find-movie" action="index.php">
-					<input class="header-forms-find-movie-input" type="text" name="movie-title" placeholder="Поиск по каталогу..." value="<?= $currentRequest ?>">
+					<input class="header-forms-find-movie-input" type="text" name="movie-title" placeholder="Поиск по каталогу..." value="<?= isset($currentRequest) ? $currentRequest : '' ?>">
 					<button class="header-forms-find-movie-button">Искать</button>
 				</form>
 					<a href="add-movie.php" class="header-add-movie-button">Добавить фильм</a>

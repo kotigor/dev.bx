@@ -10,17 +10,28 @@ require_once "./config/app.php";
 /** @var array $genres */
 /** @var array $config */
 
-$currentPage = is_null($_GET['genre']) ? getFileName(__FILE__) : $_GET['genre'];
+$currentPage = !isset($_GET['genre']) ? getFileName(__FILE__) : $_GET['genre'];
 $currentRequest = '';
 $errors = [];
 
-if (!is_null($_GET['genre']))
+if (isset($_GET['genre']))
 {
-	$genre = getGenreByCode($_GET['genre'], $genres);
-	$movies = filterMoviesByGenre($movies, $genre);
+	$genre = getGenreByCode($genres, $_GET['genre']);
+	if ($genre === false)
+	{
+		$errors[] = 'Жанра с таким кодом нет';
+	}
+	else
+	{
+		$movies = filterMoviesByGenre($movies, $genre);
+		if (empty($movies))
+		{
+			$errors[] = 'Фильмов такого жанра пока нет';
+		}
+	}
 }
 
-if (!is_null($_GET['movie-title']))
+if (isset($_GET['movie-title']))
 {
 	$movieTitle = $_GET['movie-title'];
 	$currentRequest = $_GET['movie-title'];

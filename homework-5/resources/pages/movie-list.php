@@ -3,16 +3,12 @@
 /** @var array $errors */
 ?>
 
+<?php if (!empty($errors)): ?>
+	<?= renderTemplate('./resources/blocks/_errors.php', ['errors' => $errors]); ?>
+<?php else: ?>
 <div class="movie-list">
-	<?php if (empty($errors)): ?>
-		<?php foreach ($movies as $movie): ?>
-			<?= renderTemplate('./resources/blocks/_movie.php', ['movie' => $movie]) ?>
-		<?php endforeach; ?>
-	<?php else: ?>
-		<div class="errors">
-			<?php foreach ($errors as $error): ?>
-				<div class="error"><?= $error ?></div>
-			<?php endforeach; ?>
-		</div>
-	<?php endif; ?>
+	<?php foreach ($movies as $movie): ?>
+		<?= renderTemplate('./resources/blocks/_movie.php', ['movie' => $movie]) ?>
+	<?php endforeach; ?>
 </div>
+<?php endif; ?>

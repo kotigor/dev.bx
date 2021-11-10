@@ -7,8 +7,18 @@ function filterMoviesByGenre(array $movies, string $genre): array
 	});
 }
 
-function getGenreByCode(string $genre, array $genres): string
+/**
+ * @param array $genres
+ * @param string $genre
+ *
+ * @return false|string
+ */
+function getGenreByCode(array $genres, string $genre)
 {
+	if (!isset($genres[$genre]))
+	{
+		return false;
+	}
 	return $genres[$genre];
 }
 
@@ -26,16 +36,11 @@ function getMovieById(array $movies, int $id)
 		return false;
 	}
 
-	return $movies[$id - 1];
+	return $movies[$key];
 }
 
-/**
- * @param array $movies
- * @param string $title
- *
- * @return false|array
- */
-function filterMoviesByTitle(array $movies, string $title)
+
+function filterMoviesByTitle(array $movies, string $title) : array
 {
 	return array_filter($movies, function($movie) use ($title) {
 		return strpos(mb_strtolower($movie['title']), mb_strtolower($title)) !== false;
