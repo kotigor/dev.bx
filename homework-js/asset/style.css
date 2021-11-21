@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+.calendar-container {
+    margin: 0 auto;
+    background-color: #DDD;
+    border-radius: 10px;
+    width: 600px;
+    padding: 20px;
+}
+
+.calendar-container .item-container {
+    border-bottom: 1px solid #AAA;
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-container .calendar-new-item-title {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.calendar-container button {
+    line-height: 25px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
