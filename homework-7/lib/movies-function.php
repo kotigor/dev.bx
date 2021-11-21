@@ -46,19 +46,20 @@ function getActorsById(mysqli $database, string $idsActors) : array
 
 function getMoviesSearchQuery() : string
 {
-	return "SELECT m.ID,
-       m.TITLE,
-       m.ORIGINAL_TITLE,
-       m.DESCRIPTION,
-       m.DURATION,
-       m.AGE_RESTRICTION,
-       m.RELEASE_DATE,
-       m.RATING,
-       d.NAME DIRECTOR,
-       (SELECT GROUP_CONCAT(mg.GENRE_ID) FROM movie_genre mg WHERE mg.MOVIE_ID = m.ID) GENRES,
-       (SELECT GROUP_CONCAT(ma.ACTOR_ID) FROM movie_actor ma WHERE m.ID = ma.MOVIE_ID) ACTORS
-		FROM movie m
-		INNER JOIN director d on m.DIRECTOR_ID = d.ID";
+	return
+		"SELECT m.ID,
+                m.TITLE,
+                m.ORIGINAL_TITLE,
+                m.DESCRIPTION,
+                m.DURATION,
+                m.AGE_RESTRICTION,
+                m.RELEASE_DATE,
+                m.RATING,
+                d.NAME DIRECTOR,
+                (SELECT GROUP_CONCAT(mg.GENRE_ID) FROM movie_genre mg WHERE mg.MOVIE_ID = m.ID) GENRES,
+                (SELECT GROUP_CONCAT(ma.ACTOR_ID) FROM movie_actor ma WHERE m.ID = ma.MOVIE_ID) ACTORS
+				FROM movie m
+					INNER JOIN director d on m.DIRECTOR_ID = d.ID";
 }
 
 function mapGeneralInfoAboutMovie($movieFromDb) : array
