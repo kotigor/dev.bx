@@ -1,6 +1,6 @@
 <?php
 
-namespace Decorator;
+namespace Decorator\Formatter;
 
 use Service\AdvFormatter;
 

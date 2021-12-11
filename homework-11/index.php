@@ -16,7 +16,7 @@ $calculator->applyCost();
 $calculator = new \Decorator\VatCostDecorator($calculator);
 var_dump($calculator->applyCost()->getTotalCost());*/
 
-$formatter = new \Decorator\DefaultFormatter();
+$formatter = new \Decorator\Formatter\DefaultFormatter();
 $formatter = new Service\FormatterDecorator\HeaderAdvFormatterDecorator($formatter);
 $formatter = new Service\FormatterDecorator\FooterAdvFormatterDecorator($formatter);
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decorator;
+namespace Decorator\Cost;
 
 use Service\Calculator;
 

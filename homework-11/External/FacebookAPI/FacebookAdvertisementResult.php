@@ -1,6 +1,6 @@
 <?php
 
-namespace External;
+namespace External\FacebookAPI;
 
 class FacebookAdvertisementResult
 {

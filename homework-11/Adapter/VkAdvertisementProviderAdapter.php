@@ -4,8 +4,8 @@ namespace Adapter;
 
 use Entity\Advertisement;
 use Entity\AdvertisementResponse;
-use External\VkAdvertisement;
-use External\VkPublicator;
+use External\VKAPI\VkAdvertisement;
+use External\VKAPI\VkPublicator;
 use Service\AdvertisementProviderInterface;
 
 class VkAdvertisementProviderAdapter implements AdvertisementProviderInterface

@@ -4,8 +4,8 @@ namespace Adapter;
 
 use Entity\Advertisement;
 use Entity\AdvertisementResponse;
-use External\FacebookAdvertisement;
-use External\FacebookPublicator;
+use External\FacebookAPI\FacebookAdvertisement;
+use External\FacebookAPI\FacebookPublicator;
 use Service\AdvertisementProviderInterface;
 
 class FacebookAdvertisementProviderAdapter implements AdvertisementProviderInterface

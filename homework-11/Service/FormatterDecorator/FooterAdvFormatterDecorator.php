@@ -2,7 +2,7 @@
 
 namespace Service\FormatterDecorator;
 
-use Decorator\AbstractFormatterDecorator;
+use Decorator\Formatter\AbstractFormatterDecorator;
 
 class FooterAdvFormatterDecorator extends AbstractFormatterDecorator
 {
